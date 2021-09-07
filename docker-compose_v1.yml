@@ -1,0 +1,12 @@
+version: 1
+Services:
+ db:
+    image: postgres
+    ports:
+    - 5432:5432
+ my-app:
+    build: ./
+    ports:
+    - 8080:8080
+    links:
+    - dbHost:db
