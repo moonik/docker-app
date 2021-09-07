@@ -1,5 +1,5 @@
 version: 1
-Services:
+services:
  db:
     image: postgres
     ports:
