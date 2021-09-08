@@ -1,2 +1,1 @@
-# practice-app
-# practice-app
+# Simple Spring Boot application for practicing stuff
