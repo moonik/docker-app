@@ -1,0 +1,26 @@
+spring:
+  jpa:
+    database: postgresql
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        ddl-auto: create
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+
+  datasource:
+    initialization-mode: always
+    url: jdbc:postgresql://${datasource.host}:${datasource.port}/test
+    username: ${datasource.user}
+    password: ${datasource.password}
+    continueOnError: true
+    tomcat:
+      jdbcInterceptors: "QueryTimeoutInterceptor(queryTimeout=120);SlowQueryReport(threshold=60000)"
+    driver-class-name: org.postgresql.Driver
+
+datasource:
+  host: postgres
+  port: 5432
+  user: postgres
+  password: admin
